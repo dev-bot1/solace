@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import HOME from './src/screens/homescreen';
+import FAQ from './src/screens/appfaq';
+import NOTEPAD from './src/screens/notepad';
+import SONGS from './src/screens/songs';
+import BLOGS from './src/screens/blogs';
+import VIDEO from './src/screens/video';
+import USERPROFILE from './src/screens/userprofile';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HOME} />
+        <Stack.Screen name="Notepad" component={NOTEPAD} />
+        <Stack.Screen name="Faq" component={FAQ} />
+        <Stack.Screen name="Song" component={SONGS} />
+        <Stack.Screen name="Blogs" component={BLOGS} />
+        <Stack.Screen name="Video" component={VIDEO} />
+        <Stack.Screen name="Userprofile" component={USERPROFILE} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
