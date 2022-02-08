@@ -14,7 +14,7 @@ function NOTEPAD({ navigation }) {
 
     return (
         <>
-            {/* <Header titleText='{Enter Title}' /> */}
+            <Header titleText='{Enter Title}' />
             <IconButton
                 icon="close"
                 size={25}

@@ -19,7 +19,7 @@ export default function App() {
   return (
     <StoreProvider store = {store}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Viewnote">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HOME} />
         <Stack.Screen name="Notepad" component={NOTEPAD} />
         <Stack.Screen name="Viewnote" component={VIEWNOTES} />
