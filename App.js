@@ -11,6 +11,7 @@ import SONGS from './src/screens/songs';
 import BLOGS from './src/screens/blogs';
 import VIDEO from './src/screens/video';
 import USERPROFILE from './src/screens/userprofile';
+import VIDEOPLAYER from './src/screens/videoplayer';
 import store from './src/reducer/store'
 
 const Stack = createStackNavigator();
@@ -19,7 +20,7 @@ export default function App() {
   return (
     <StoreProvider store = {store}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Viewnote">
+      <Stack.Navigator initialRouteName="Video">
         <Stack.Screen name="Home" component={HOME} />
         <Stack.Screen name="Notepad" component={NOTEPAD} />
         <Stack.Screen name="Viewnote" component={VIEWNOTES} />
@@ -27,6 +28,7 @@ export default function App() {
         <Stack.Screen name="Song" component={SONGS} />
         <Stack.Screen name="Blogs" component={BLOGS} />
         <Stack.Screen name="Video" component={VIDEO} />
+        <Stack.Screen name="Videoplayer" component={VIDEOPLAYER} />
         <Stack.Screen name="Userprofile" component={USERPROFILE} />
       </Stack.Navigator>
     </NavigationContainer>
