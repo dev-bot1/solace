@@ -9,6 +9,8 @@ import SONGS from './src/screens/songs';
 import BLOGS from './src/screens/blogs';
 import VIDEO from './src/screens/video';
 import USERPROFILE from './src/screens/userprofile';
+import SPLASH from './src/screens/splash';
+
 
 const Stack = createStackNavigator();
 
@@ -17,6 +19,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HOME} />
+        <Stack.Screen name="Splash" component={SPLASH} />
         <Stack.Screen name="Notepad" component={NOTEPAD} />
         <Stack.Screen name="Faq" component={FAQ} />
         <Stack.Screen name="Song" component={SONGS} />
