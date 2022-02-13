@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import { Text, IconButton, TextInput, FAB } from 'react-native-paper'
 // import Header from '../component/Header'
 
-function NOTEPAD({ navigation }) {
+function AddNotes({ navigation }) {
     const [noteTitle, setNoteTitle] = useState('')
     const [noteDescription, setNoteDescription] = useState('')
 
@@ -92,4 +92,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default NOTEPAD
+export default AddNotes
