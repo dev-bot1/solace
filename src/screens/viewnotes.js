@@ -25,7 +25,7 @@ function VIEWNOTES({ navigation }) {
 
     return (
         <>
-            <Header titleText='{Add Title}' />
+            {/* <Header titleText='{Add Title}' /> */}
             <View style={styles.container}>
                 {notes.length === 0 ? (
                     <View style={styles.titleContainer}>

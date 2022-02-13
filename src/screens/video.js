@@ -39,6 +39,7 @@ const VIDEO = ({navigation}) => {
           <AppButton onPress="jsEcDAx8S1g" icon="tty" title="Crisis" backgroundColor="red"/>
           <AppButton onPress="AUr-iNA0AM8" icon="empire" title="Anxiety" backgroundColor="lightblue"/>
           <AppButton onPress="DODLEX4zzLQ" icon="smile-o" title="Happy" backgroundColor="green"/>
+          {/* <AppButton onPress="NGVYIlDLgKc" icon="smile-o" title="{User}Mood" backgroundColor="green"/> */}
           </View>
           <View>
           <AppButton onPress="RBumgq5yVrA" icon="heart" title="Romantic" backgroundColor="pink"/>
