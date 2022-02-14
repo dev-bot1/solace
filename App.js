@@ -57,10 +57,10 @@ export default function App() {
           name="Videoplayer" 
           component={VIDEOPLAYER}
           />
-        <Drawer.Screen 
+        {/* <Drawer.Screen 
           name="Userprofile" 
           component={USERPROFILE} 
-          />
+          /> */}
         <Drawer.Screen 
           name="About Us" 
           component={FAQ} 

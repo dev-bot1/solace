@@ -1,3 +1,13 @@
+// import React from 'react';
+// import { Text,View } from 'react-native';
+
+// export default function HOME (){
+//     return (
+//         <View>
+//             <Text>This is Home Page</Text>
+//         </View>
+//     )
+// }
 // import React from "react";
 // import {
 //   StyleSheet,
@@ -9,20 +19,15 @@
 //   TouchableOpacity,
 //   ScrollView,
 // } from "react-native";
-// import { createStackNavigator } from "@react-navigation/stack";
-// import NOTEPAD from "./notepad";
-// import BLOGS from "./blogs";
-// // import FOOTER from "../../components/footer";
-// // import HEADER from "../../components/header";
 
 // export default function HOME() {
 //   return (
+//     <ScrollView>
 //       <View style={styles.body}>
-//         {/* <HEADER /> */}
 //         <View style={styles.upperTag}>
 //           <ImageBackground
 //             style={styles.image}
-//             // source={require("../../media/Path4.png")}
+//             source={require("../../assets/Path4.png")}
 //           >
 //             <Text style={styles.text}>
 //               Hey! How are you feeling? Just 2 more days to go.
@@ -32,30 +37,28 @@
 //         <View style={styles.midTag}>
 //           <Image
 //             style={styles.calender}
-//             // source={require("../../media/Calender.png")}
+//             source={require("../../assets/Calender.png")}
 //           />
 //           <View style={styles.midTagRight}>
-//             <TouchableOpacity onPress={() => {}}>
+//             <TouchableOpacity /*onPress={() => {}}*/>
 //               <View style={styles.notepad}>
 //                 <Text
 //                   style={{
-//                     color: "black",
+//                     color: "white",
 //                     fontSize: 20,
 //                     fontFamily: "Helvetica",
 //                     fontWeight: "500",
 //                   }}
 //                 >
-//                   <a href={NOTEPAD}>Notepad</a>
+//                   Notepad
 //                 </Text>
 //               </View>
 //             </TouchableOpacity>
-//          </View>
-//          <View>
-//             <TouchableOpacity onPress={() => {}}>
+//             <TouchableOpacity /*onPress={() => {}}*/>
 //               <View style={styles.blogs}>
 //                 <Text
 //                   style={{
-//                     color: "black",
+//                     color: "white",
 //                     fontSize: 20,
 //                     fontFamily: "Helvetica",
 //                     fontWeight: "500",
@@ -65,7 +68,7 @@
 //                 </Text>
 //               </View>
 //             </TouchableOpacity>
-//          </View>
+//           </View>
 //         </View>
 //         <View style={styles.lowerTag}>
 //           <Text style={styles.lowerTagTextHeading}>
@@ -85,8 +88,8 @@
 //             placeholder="Share what you are feeling today"
 //           />
 //         </View>
-//         {/* <FOOTER /> */}
 //       </View>
+//     </ScrollView>
 //   );
 // }
 
@@ -94,6 +97,7 @@
 //   body: {
 //     flex: 1,
 //     backgroundColor: "#FF7BBE",
+//     paddingBottom: 20,
 //   },
 //   image: {
 //     resizeMode: "contain",
@@ -135,6 +139,7 @@
 //     width: 175,
 //     borderColor: "#414141",
 //     borderWidth: 1.5,
+//     backgroundColor: "#12171a",
 //   },
 //   blogs: {
 //     backgroundColor: "white",
@@ -146,10 +151,11 @@
 //     width: 175,
 //     borderColor: "#414141",
 //     borderWidth: 1.5,
+//     backgroundColor: "#12171a",
 //   },
 //   lowerTag: {
 //     marginTop: 40,
-//     backgroundColor: "white",
+//     backgroundColor: "#F5F5F5",
 //     width: "80%",
 //     justifyContent: "center",
 //     margin: "auto",
@@ -173,13 +179,181 @@
 //     padding: 10,
 //   },
 // });
-import React from 'react';
-import { Text,View } from 'react-native';
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 
-export default function HOME (){
-    return (
-        <View>
-            <Text>This is Home Page</Text>
+export default function HOME() {
+  return (
+    <ScrollView>
+      <View style={styles.body}>
+        <View style={styles.upperTag}>
+          <ImageBackground
+            style={styles.image}
+            source={require("../../assets/Path4.png")}
+          >
+            <Text style={styles.text}>
+              Hey! How are you feeling? Just 2 more days to go.
+            </Text>
+          </ImageBackground>
         </View>
-    )
+        <View style={styles.midTag}>
+          <Image
+            style={styles.calender}
+            source={require("../../assets/Calender.png")}
+          />
+          <View style={styles.midTagRight}>
+            <TouchableOpacity /*onPress={() => {}}*/>
+              <View style={styles.notepad}>
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 20,
+                    fontFamily: "Helvetica",
+                    fontWeight: "500",
+                  }}
+                >
+                  Notepad
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity /*onPress={() => {}}*/>
+              <View style={styles.blogs}>
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 20,
+                    fontFamily: "Helvetica",
+                    fontWeight: "500",
+                  }}
+                >
+                  Blogs
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style={styles.lowerTagMain}>
+          <View style={styles.lowerTag}>
+            <Text style={styles.lowerTagTextHeading}>
+              What others are feeling at Solace?
+            </Text>
+            <Text style={styles.lowerTagText}>
+              Its My Secret Diary
+            </Text>
+            <Text style={styles.lowerTagText}>
+              Add More Features
+            </Text>
+            <Text style={styles.lowerTagText}>
+              Change Your song Selection
+            </Text>
+            <TextInput
+              style={styles.lowerTagText}
+              placeholder="Share what you are feeling today"
+            />
+          </View>
+        </View>
+      </View>
+    </ScrollView>
+  );
 }
+
+const styles = StyleSheet.create({
+  body: {
+    flex: 1,
+    backgroundColor: "#FF7BBE",
+    paddingBottom: 150,
+  },
+  upperTag: {
+    alignItems: "center",
+  },
+  image: {
+    resizeMode: "contain",
+    marginTop: 50,
+    marginHorizontal: "auto",
+    width: 250,
+    height: 155,
+    alignItems: "center",
+  },
+  text: {
+    width: 200,
+    textAlign: "center",
+    marginHorizontal: "auto",
+    fontSize: 22,
+    marginTop: 20,
+    fontFamily: "Cursive",
+    fontWeight: "600",
+  },
+  calender: {
+    resizeMode: "contain",
+    width: 150,
+    height: 150,
+  },
+  midTag: {
+    marginTop: 40,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+  },
+  midTagRight: {
+    flexDirection: "column",
+  },
+  notepad: {
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 10,
+    padding: 10,
+    marginBottom: 5,
+    width: 175,
+    borderColor: "#414141",
+    borderWidth: 1.5,
+    backgroundColor: "#12171a",
+  },
+  blogs: {
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 10,
+    padding: 10,
+    marginTop: 5,
+    width: 175,
+    borderColor: "#414141",
+    borderWidth: 1.5,
+    backgroundColor: "#12171a",
+  },
+  lowerTag: {
+    marginTop: 40,
+    backgroundColor: "#F5F5F5",
+    width: "80%",
+    padding: 10,
+    borderColor: "#A8A8A8",
+    borderWidth: 1,
+    borderRadius: 15,
+  },
+  lowerTagText: {
+    padding: 10,
+    borderColor: "black",
+    borderWidth: 1,
+    margin: 8,
+    textAlign: "center",
+    fontSize: 16,
+  },
+  lowerTagTextHeading: {
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: "500",
+    padding: 10,
+  },
+  lowerTagMain: {
+    alignItems: "center",
+  },
+});
